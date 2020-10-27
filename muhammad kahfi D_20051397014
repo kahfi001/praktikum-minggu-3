@@ -1,0 +1,103 @@
+// NAMA  : MUHAMMAD KAHFI DJARDJANI
+// NIM 	 : 20051397014
+// KELAS : 2020B MI
+
+
+#include<iostream>
+#include<math.h>
+#include<conio.h>
+
+using namespace std;
+
+int main ()
+{
+char pilihan;
+cout <<" PRAKTIKUM MINGGU 3 \n\n" << endl;
+cout<<" NAMA : MUHAMMAD KAHFI DJARDJANI \n NIM : 20051397014 \n KELAS : 2020B MI \n\n";
+cout <<" Pilih Menu (1|2|3|4) : \n 1. MENGHITUNG JUMLAH N SUKU DARI BARISAN 1^3,2^3,3^3.... \n 2. MENGHITUNG JUMLAH SUKU KE N DERET 3,7,11,15 \n 3. MEBUAT TABEL PERKALIAN \n 4. MEMBUAT ANGKA SEGITIGA \n "<< endl;
+cout <<" Masukkan Pilihan: ";
+cin >> pilihan;
+cout << endl;
+ 	
+ 	switch(pilihan)
+ 	{
+ 			case '1':
+ 			{
+	 		int a=pow(1,3),b,n, nilai;
+			cout<<"menghitung jumlah n suku dari barisan 1^3, 2^3,3^3,4^3...."<<endl;
+			cout<<"----------------------------------------------------------\n";
+			cout<<"masukkan nilai suku ke-";
+			cin>>n;
+			nilai=n*n*(n+1)*(n+1)/4;
+			
+			cout<<"jumlah n suku dari barisan 1^3,2^3,3^3,... adalah : "<<nilai<<endl;
+			break;
+			}
+			case '2':
+			{
+			int a=3;
+			int b=4;
+			int n;
+			cout<<"menghitung jumlah suku ke n dari deret 3,7,11,15,..."<<endl;
+			cout<<"-------------------------------------------------"<<endl;
+			cout<<"nilai awal \t\t: "<<a<<endl;
+			cout<<"selisih antar suku \t: "<<b<<endl;
+			cout<<"masukkan suku ke n \t: ";
+			cin>>n;
+			float jumlah=(2*a+(n-1)*b)*n/2;
+				
+			
+			cout<<"maka jumlah suku ke-"<<n<<" adalah "<<jumlah<<endl;
+			break;
+			}
+			case '3' :
+		{
+			int angkaKolom,angkaBaris,l,k;
+			cout<<("PROGRAM TABEL PERKALIAN") << endl;
+			cout<<("========================\n");
+		    cout<<("Masukan Jumlah (Baris) : ");
+		    cin>>l;
+		    cout<<("Masukan Jumlah (Kolom) : ");
+		    cin>>k;
+		    for(angkaKolom=1;angkaKolom<=l;angkaKolom++)
+		    	for(angkaBaris=1;angkaBaris<=k;angkaBaris++){
+		            cout<<"\t"<<angkaBaris*angkaKolom;
+        	}
+        	cout<<"\n";
+	    	break;
+		}	
+			case '4' :
+		{
+			int n,i,j;
+			cout<<"Membuat Angka Segitiga \n\n";
+			cout<<"Masukkan tinggi segitiga : ";
+			cin>>n;
+			cout<<"\n";
+			for (i=1; i<=n; i++)
+			{
+			for (j=1; j<=i; j++)
+			{
+			cout<<j;
+			}
+			cout<<" \n";
+			}
+			for (i=n-1; i>=1;i--)
+			{
+			for (j=1;j<=i;j++)
+			{
+			cout<<j;
+			}
+			cout<<" \n";
+			}
+			break;
+			}	
+	 }
+ 		
+		
+	}
+	
+
+	
+ 	
+
+
